@@ -1,4 +1,4 @@
-# Install script for directory: /home/d_hryhorieva_io12/coursework/part4
+# Install script for directory: /home/d_hryhorieva_io12/coursework/part4_changed
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/d_hryhorieva_io12/coursework/part4/ninja-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/d_hryhorieva_io12/coursework/part4_changed/ninja-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

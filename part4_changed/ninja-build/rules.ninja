@@ -42,7 +42,7 @@ rule CXX_STATIC_LIBRARY_LINKER__Calculator
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -H/home/d_hryhorieva_io12/coursework/part4 -B/home/d_hryhorieva_io12/coursework/part4/ninja-build
+  command = /usr/bin/cmake -H/home/d_hryhorieva_io12/coursework/part4_changed -B/home/d_hryhorieva_io12/coursework/part4_changed/ninja-build
   description = Re-running CMake...
   generator = 1
 

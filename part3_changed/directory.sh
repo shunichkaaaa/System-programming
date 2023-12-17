@@ -20,7 +20,7 @@ done
 cd ..
 
 # Record the start time
-start_time=$(date +%s)
+start_time=$(date +%s.%N)
 
 # Check the existence of target directory
 if [ ! -d "$target_directory" ]; then
@@ -50,10 +50,10 @@ for item in "$target_directory"/*; do
 done
 
 # Record the end time
-end_time=$(date +%s)
+end_time=$(date +%s.%N)
 
 # Calculate the duration in seconds
-duration=$((end_time - start_time))
+duration=$(echo "$end_time - $start_time" | bc)
 
 # Print the duration
 echo "Script duration: $duration seconds"

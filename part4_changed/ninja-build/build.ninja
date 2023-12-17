@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/d_hryhorieva_io12/coursework/part4/ninja-build && /usr/bin/cmake -H/home/d_hryhorieva_io12/coursework/part4 -B/home/d_hryhorieva_io12/coursework/part4/ninja-build
+  COMMAND = cd /home/d_hryhorieva_io12/coursework/part4_changed/ninja-build && /usr/bin/cmake -H/home/d_hryhorieva_io12/coursework/part4_changed -B/home/d_hryhorieva_io12/coursework/part4_changed/ninja-build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -82,7 +82,7 @@ build libCalculator.a: CXX_STATIC_LIBRARY_LINKER__Calculator CMakeFiles/Calculat
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/d_hryhorieva_io12/coursework/part4/ninja-build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/d_hryhorieva_io12/coursework/part4_changed/ninja-build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util

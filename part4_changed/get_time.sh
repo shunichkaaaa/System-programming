@@ -1,27 +1,27 @@
 #!/bin/bash
 
-ninja_build_dir="./ninja-build"
+ninja_build_dir="ninja-build"
 
-# Change to the ninja-build directory
-if ! cd "$ninja_build_dir"; then
-    echo "Error: Could not change to the ninja-build directory." >&2
+# Check if the directory exists
+if [ ! -d "$ninja_build_dir" ]; then
+    echo "Error: Directory $ninja_build_dir does not exist." >&2
     exit 1
 fi
 
-cd ninja-build
+cd "$ninja_build_dir"
 
 # Record the start time
-start_time=$(date +%s)
+start_time=$(date +%s.%N)
 
 # Build commands
 cmake -G Ninja ..
 ninja
 
 # Record the end time
-end_time=$(date +%s)
+end_time=$(date +%s.%N)
 
 # Calculate the duration in seconds
-duration=$((end_time - start_time))
+duration=$(echo "$end_time - $start_time" | bc)
 
 # Print the duration
 echo "Build duration: $duration seconds"
