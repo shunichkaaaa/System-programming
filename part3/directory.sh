@@ -1,6 +1,26 @@
-!/bin/bash
+#!/bin/bash
 
 target_directory="target_dir"
+
+# Change to the target directory
+cd "$target_directory" || exit
+
+# Create folders named folder1 to folder100
+for ((i=1; i<=1000; i++)); do
+    dir_name="dir${i}"
+    mkdir "$dir_name"
+done
+
+# Create files named file1 to file100
+for ((i=1; i<=1000; i++)); do
+    file_name="file${i}"
+    touch "$file_name"
+done
+
+cd ..
+
+# Record the start time
+start_time=$(date +%s)
 
 # Check the existence of target directory
 if [ ! -d "$target_directory" ]; then
@@ -29,3 +49,11 @@ for item in "$target_directory"/*; do
     fi
 done
 
+# Record the end time
+end_time=$(date +%s)
+
+# Calculate the duration in seconds
+duration=$((end_time - start_time))
+
+# Print the duration
+echo "Script duration: $duration seconds"
